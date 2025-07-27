@@ -3,13 +3,13 @@ package com.mbarekDev.currency_exchange_service.entity;
 import jakarta.persistence.Entity;
 import java.math.BigDecimal;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
 public class CurrencyExchange {
     @Id
     private Long id;
+
     @Column(name = "currency_from")
     private String from;
     @Column(name = "currency_to")
@@ -17,8 +17,8 @@ public class CurrencyExchange {
 
     private BigDecimal conversionMultiple;
     private String environment;
-    public CurrencyExchange() {
 
+    public CurrencyExchange() {
     }
 
     public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMultiple) {
@@ -68,7 +68,5 @@ public class CurrencyExchange {
     public void setEnvironment(String environment) {
         this.environment = environment;
     }
-
-
 }
 
