@@ -7,7 +7,6 @@ import org.springframework.web.client.RestTemplate;
 
 @Configuration(proxyBeanMethods = false)
 class RestTemplateConfiguration {
-    
     @Bean
     RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder.build();
