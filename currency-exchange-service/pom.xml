@@ -49,7 +49,6 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
@@ -59,8 +58,26 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
-		<!-- Spring Boot 2 Tracing -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
 
+		<!--  dependencies {
+		  implementation "io.github.resilience4j:resilience4j-spring-boot3:${resilience4jVersion}"
+		  implementation "org.springframework.boot:spring-boot-starter-actuator"
+		  implementation "org.springframework.boot:spring-boot-starter-aop"
+		  		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>resilience4j-spring-boot3</artifactId>
+		</dependency>
+		}-->
+		<dependency>
+			<groupId>io.github.resilience4j</groupId>
+			<artifactId>resilience4j-spring-boot2</artifactId>
+		</dependency>
+
+		<!-- Spring Boot 2 Tracing -->
 		<!-- Sleuth (Tracing Configuration) > Brave (Tracer library) > Zipkin -->
 
 		<!--
@@ -113,16 +130,6 @@
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-tracing-bridge-otel</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>io.github.resilience4j</groupId>
-			<artifactId>resilience4j-spring-boot2</artifactId>
 		</dependency>
 
 		<dependency>
