@@ -21,3 +21,26 @@ http://localhost:8765/currency-exchange/from/USD/to/MAD
 http://localhost:8765/currency-conversion/from/USD/to/MAD/quantity/10
 http://localhost:8765/currency-conversion-feign/from/USD/to/MAD/quantity/10
 http://localhost:8765/currency-conversion-new/from/USD/to/MAD/quantity/10
+
+while ($true) {
+    curl http://localhost:8000/sample-api
+    Start-Sleep -Seconds 2
+    Clear-Host
+}
+
+
+while ($true) {
+    curl http://localhost:8000/sample-api
+    Start-Sleep -Milliseconds 100
+    Clear-Host
+}
+
+while ($true) {
+    Clear-Host
+    curl http://localhost:8000/sample-api
+    Start-Sleep -Milliseconds 100
+}
+
+watch -n 0.1 curl http://localhost:8000/sample-api
+
+

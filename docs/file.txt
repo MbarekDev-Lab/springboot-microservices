@@ -1,0 +1,4 @@
+    resilience4j.retry.instances.sample-api.maxAttempts=5 #NEW
+    #resilience4j.retry.instances.sample-api.maxRetryAttempts=5 #OLD
+
+    watch -n 0.1 curl http://localhost:8000/sample-api
