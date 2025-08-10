@@ -1,0 +1,40 @@
+    docker container run -d -p 5000:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+    docker container run -d -p 5000:5000 in28min/hello-world-java:0.0.1.RELEASE
+    docker container run -d -p 5000:5000 in28min/hello-world-python:0.0.1.RELEASE
+    docker container ls
+    docker image ls
+    docker container stop cc
+    docker container run -d -p 5001:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+    docker container run -d -p 5002:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+    docker container run -p 5003:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+    docker container run -p 5003:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+
+    docker --version
+    docker container ls
+    docker build -t in28min/hello-world-docker:v1 .
+    docker image list
+    docker run -d -p 5000:5000 in28min/hello-world-docker:v1
+    docker build -t in28min/hello-world-docker:v2 .
+    docker container run -d -p 5000:5000 in28min/hello-world-docker:v2
+    docker build -t in28min/hello-world-docker:v3 .
+    docker container run -d -p 5000:5000 in28min/hello-world-docker:v3
+    docker build -t in28min/hello-world-docker:v4 .
+
+
+    --------->------->------->
+
+PS D:\Code\JAVA_Code\spring-microservices-v3-main> docker pull in28min/hello-world-nodejs:0.0.1.RELEASE
+0.0.1.RELEASE: Pulling from in28min/hello-world-nodejs
+50b62877eafa: Pull complete
+e7c96db7181b: Pull complete
+b6cd29cc2885: Pull complete
+4cfcfaa362d1: Pull complete
+017f53a1e6e8: Pull complete
+b51cbf8d9088: Pull complete
+e3b1e747cbd3: Pull complete
+Digest: sha256:0688621026b204e653b26d73f6a84af221ec92f1c4da93112f13a84ae16a112b
+Status: Downloaded newer image for in28min/hello-world-nodejs:0.0.1.RELEASE
+docker.io/in28min/hello-world-nodejs:0.0.1.RELEASE
+PS D:\Code\JAVA_Code\spring-microservices-v3-main> docker run -d -p 5000:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+1f3b8d4c505183bac646897bbfa3f9e8090a375eeecc04ab5d3c3f289b5ffc77
+PS D:\Code\JAVA_Code\spring-microservices-v3-main>
