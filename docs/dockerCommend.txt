@@ -38,3 +38,17 @@ docker.io/in28min/hello-world-nodejs:0.0.1.RELEASE
 PS D:\Code\JAVA_Code\spring-microservices-v3-main> docker run -d -p 5000:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
 1f3b8d4c505183bac646897bbfa3f9e8090a375eeecc04ab5d3c3f289b5ffc77
 PS D:\Code\JAVA_Code\spring-microservices-v3-main> 
+
+-- top show running container - > 1f3b8d4c505183bac646897bbfa3f9e8090a375eeecc04ab5d3c3f289b5ffc77
+PS D:\Code\JAVA_Code\spring-microservices-v3-main> docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED         STATUS         PORTS                                         NAMES
+1f3b8d4c5051   in28min/hello-world-nodejs:0.0.1.RELEASE   "docker-entrypoint.s…"   9 minutes ago   Up 9 minutes   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   agitated_brahmagupta
+PS D:\Code\JAVA_Code\spring-microservices-v3-main>
+
+----> to stop the runnign conttainer hello
+
+PS D:\Code\JAVA_Code\spring-microservices-v3-main> docker container stop 1f3b8d4c5051
+1f3b8d4c5051
+PS D:\Code\JAVA_Code\spring-microservices-v3-main> 
+PS D:\Code\JAVA_Code\spring-microservices-v3-main> 
+
