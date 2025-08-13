@@ -1,0 +1,108 @@
+    docker container run -d -p 5000:5000 mbarekDev/hello-world-nodejs:0.0.1.RELEASE
+    docker container run -d -p 5000:5000 mbarekDev/hello-world-java:0.0.1.RELEASE
+    docker container run -d -p 5000:5000 mbarekDev/hello-world-python:0.0.1.RELEASE
+    docker container ls
+    docker image ls
+    docker container stop cc
+    docker container run -d -p 5001:5000 mbarekDev/hello-world-nodejs:0.0.1.RELEASE
+    docker container run -d -p 5002:5000 mbarekDev/hello-world-nodejs:0.0.1.RELEASE
+    docker container run -p 5003:5000 mbarekDev/hello-world-nodejs:0.0.1.RELEASE
+    docker container run -p 5003:5000 mbarekDev/hello-world-nodejs:0.0.1.RELEASE
+
+    docker --version
+    docker container ls
+    docker build -t mbarekDev/hello-world-docker:v1 .
+    docker image list
+    docker run -d -p 5000:5000 mbarekDev/hello-world-docker:v1
+    docker build -t mbarekDev/hello-world-docker:v2 .
+    docker container run -d -p 5000:5000 mbarekDev/hello-world-docker:v2
+    docker build -t mbarekDev/hello-world-docker:v3 .
+    docker container run -d -p 5000:5000 mbarekDev/hello-world-docker:v3
+    docker build -t mbarekDev/hello-world-docker:v4 .
+
+
+    --------->------->------->
+
+PS D:\Code\JAVA_Code\spring-microservices-v3-main> docker pull mbarekDev/hello-world-nodejs:0.0.1.RELEASE
+0.0.1.RELEASE: Pulling from mbarekDev/hello-world-nodejs
+50b62877eafa: Pull complete
+e7c96db7181b: Pull complete
+b6cd29cc2885: Pull complete
+4cfcfaa362d1: Pull complete
+017f53a1e6e8: Pull complete
+b51cbf8d9088: Pull complete
+e3b1e747cbd3: Pull complete
+Digest: sha256:0688621026b204e653b26d73f6a84af221ec92f1c4da93112f13a84ae16a112b
+Status: Downloaded newer image for in28min/hello-world-nodejs:0.0.1.RELEASE
+docker.io/in28min/hello-world-nodejs:0.0.1.RELEASE
+PS D:\Code\JAVA_Code\spring-microservices-v3-main> docker run -d -p 5000:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+1f3b8d4c505183bac646897bbfa3f9e8090a375eeecc04ab5d3c3f289b5ffc77
+PS D:\Code\JAVA_Code\spring-microservices-v3-main>
+
+
+------------->
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container run -d -p 5000:5000 mbarekDev/hello-world-nodejs:0.0.1.RELEASE
+4040731619e6d619e7f5bb893b98f8d133b56d54cec130490aa4abfa990502eb
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+4040731619e6   in28min/hello-world-nodejs:0.0.1.RELEASE   "docker-entrypoint.s…"   11 minutes ago   Up 11 minutes   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   wonderful_dijkstra
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker image ls
+REPOSITORY                   TAG             IMAGE ID       CREATED        SIZE
+mysql                        8-oracle        679e7e924f38   3 months ago   1.06GB
+hello-world                  latest          ec153840d1e6   6 months ago   20.4kB
+in28min/hello-world-nodejs   0.0.1.RELEASE   0688621026b2   3 years ago    180MB
+
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+4040731619e6   in28min/hello-world-nodejs:0.0.1.RELEASE   "docker-entrypoint.s…"   18 minutes ago   Up 18 minutes   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   wonderful_dijkstra
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container stop 4040731619e6
+4040731619e6
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service>
+
+
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+4040731619e6   in28min/hello-world-nodejs:0.0.1.RELEASE   "docker-entrypoint.s…"   18 minutes ago   Up 18 minutes   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   wonderful_dijkstra
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container stop 4040731619e6
+4040731619e6
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container run -d -p 5001:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+68c9c3a3d17c627a0a574d6b0ae3a0045aa612283c361ffd18118cc32a8ed21c
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container run -d -p 5001:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+0bb847cd97496750b3842ca5e3ee3602eab2d0c784ebfc26d2ee789355bbe78c
+docker: Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint loving_stonebraker (3cc39baf3272e5eadee47cd549b45ac9a8a2cd90fca65841224d13e9188688a0): Bind for 0.0.0.0:5001 failed: port is already allocated
+
+Run 'docker run --help' for more information
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container run -d -p 5002:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+a36af979c01c51340fcc3e18db670bf96cdbdc271c6b521d29157a45fb413ef0
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED              STATUS              PORTS                                         NAMES
+a36af979c01c   in28min/hello-world-nodejs:0.0.1.RELEASE   "docker-entrypoint.s…"   42 seconds ago       Up 41 seconds       0.0.0.0:5002->5000/tcp, [::]:5002->5000/tcp   keen_allen
+68c9c3a3d17c   in28min/hello-world-nodejs:0.0.1.RELEASE   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:5001->5000/tcp, [::]:5001->5000/tcp   hardcore_pasteur
+PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service>
+
+ ------------------>
+ PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container ls
+ CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+ 4040731619e6   in28min/hello-world-nodejs:0.0.1.RELEASE   "docker-entrypoint.s…"   18 minutes ago   Up 18 minutes   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   wonderful_dijkstra
+ PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container stop 4040731619e6
+ 4040731619e6
+ PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container run -d -p 5001:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+ 68c9c3a3d17c627a0a574d6b0ae3a0045aa612283c361ffd18118cc32a8ed21c
+ PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container run -d -p 5001:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+ 0bb847cd97496750b3842ca5e3ee3602eab2d0c784ebfc26d2ee789355bbe78c
+ docker: Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint loving_stonebraker (3cc39baf3272e5eadee47cd549b45ac9a8a2cd90fca65841224d13e9188688a0): Bind for 0.0.0.0:5001 failed: port is already allocated
+
+ Run 'docker run --help' for more information
+ PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container run -d -p 5002:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+ a36af979c01c51340fcc3e18db670bf96cdbdc271c6b521d29157a45fb413ef0
+ PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container ls
+ CONTAINER ID   IMAGE                                      COMMAND                  CREATED              STATUS              PORTS                                         NAMES
+ a36af979c01c   in28min/hello-world-nodejs:0.0.1.RELEASE   "docker-entrypoint.s…"   42 seconds ago       Up 41 seconds       0.0.0.0:5002->5000/tcp, [::]:5002->5000/tcp   keen_allen
+ 68c9c3a3d17c   in28min/hello-world-nodejs:0.0.1.RELEASE   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:5001->5000/tcp, [::]:5001->5000/tcp   hardcore_pasteur
+ PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container run  -p 5003:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+ Ready on port 5000!
+
+ docker container kill 68c9c3a3d17c
+
+
+
