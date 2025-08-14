@@ -85,7 +85,7 @@ PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service>
  CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS          PORTS                                         NAMES
  4040731619e6   in28min/hello-world-nodejs:0.0.1.RELEASE   "docker-entrypoint.s…"   18 minutes ago   Up 18 minutes   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   wonderful_dijkstra
  PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container stop 4040731619e6
- 4040731619e6
+
  PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container run -d -p 5001:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
  68c9c3a3d17c627a0a574d6b0ae3a0045aa612283c361ffd18118cc32a8ed21c
  PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service> docker container run -d -p 5001:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
