@@ -145,3 +145,10 @@ EXPOSE 5000
 COPY --from=build /home/app/target/*.jar app.jar
 ENTRYPOINT [ "sh", "-c", "java -jar /app.jar" ]
 
+
+====> lunching zipkin Container using docker
+docker run -p 9411:9411 openzipkin/zipkin:2.23
+
+
+
+
