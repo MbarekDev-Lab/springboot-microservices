@@ -107,8 +107,41 @@ PS D:\Code\JAVA_Code\microservices-imp\currency-exchange-service>
 Dockerfile
  docker --version
  docker ps
-docker build -t hello-world-java:latest .
+ docker build -t hello-world-java:latest .
 
 
+- 1) Dockerfile - Creating Docker Images
+FROM openjdk:18.0-slim
+COPY target/*.jar app.jar
+EXPOSE 5000
+ENTRYPOINT ["java","-jar","/app.jar"]
 
+- 2) Dockerfile - Build Jar File—Multi Stage
+FROM maven:3.8.6-openjdk-18-slim AS build
+WORKDIR /home/app
+COPY . /home/app
+RUN mvn -f /home/app/pom.xml clean package
+
+FROM openjdk:18.0-slim
+EXPOSE 5000
+COPY --from=build /home/app/target/*.jar app.jar
+ENTRYPOINT [ "sh", "-c", "java -jar /app.jar" ]
+
+
+3) Dockerfile - Caching
+FROM maven:3.8.6-openjdk-18-slim AS build
+WORKDIR /home/app
+
+COPY ./pom.xml /home/app/pom.xml
+COPY ./src/main/java/com/in28minutes/rest/webservices/restfulwebservices/RestfulWebServicesApplication.java	/home/app/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/RestfulWebServicesApplication.java
+
+RUN mvn -f /home/app/pom.xml clean package
+
+COPY . /home/app
+RUN mvn -f /home/app/pom.xml clean package
+
+FROM openjdk:18.0-slim
+EXPOSE 5000
+COPY --from=build /home/app/target/*.jar app.jar
+ENTRYPOINT [ "sh", "-c", "java -jar /app.jar" ]
 

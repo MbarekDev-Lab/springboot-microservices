@@ -13,7 +13,7 @@ EXPOSE 5000
 ENTRYPOINT ["java","-jar","/app.jar"]
 ```
 
-## Dockerfile - 2 - Build Jar File - Multi Stage
+## Dockerfile - 2 - Build Jar File—Multi Stage
 ```
 FROM maven:3.8.6-openjdk-18-slim AS build
 WORKDIR /home/app
