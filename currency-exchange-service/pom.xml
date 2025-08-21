@@ -127,9 +127,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<!--Build Docker Image -->
 					<image>
 						<name>in28min/mmv3-${project.artifactId}:${project.version}</name>
 					</image>
+					<!-- Default-->
 					<pullPolicy>IF_NOT_PRESENT</pullPolicy>
 				</configuration>				
 			</plugin>
